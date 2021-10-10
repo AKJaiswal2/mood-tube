@@ -1,0 +1,55 @@
+CREATE TABLE user_data(
+id BIGSERIAL NOT NULL PRIMARY KEY,
+first_name VARCHAR(50)NOT NULL,
+last_name VARCHAR(50)NOT NULL,
+gender VARCHAR(10)NOT NULL,
+DOB DATE,
+email VARCHAR(150) UNIQUE NOT NULL,
+password VARCHAR(20)NOT NULL
+)
+
+SELECT * FROM user_data
+
+CREATE OR REPLACE FUNCTION createusers(fname VARCHAR(50),lname VARCHAR(50),gen VARCHAR(10),date_of_birth DATE,
+									   uemail VARCHAR(150),pass VARCHAR(20))
+returns table(
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+gender VARCHAR(10),
+DOB DATE,
+email VARCHAR(150),
+password VARCHAR(20)
+) AS
+$$
+DECLARE 
+  l_id integer;
+BEGIN
+INSERT INTO user_data(first_name, last_name, gender, DOB, email, password)
+VALUES(fname, lname,gen, date_of_birth, uemail, pass) returning id into l_id;
+return query(select u.first_name, u.last_name, u.gender, u.DOB, u.email, u.password from user_data u where u.id = l_id);
+END
+$$
+ LANGUAGE 'plpgsql';
+ 
+ 
+ SELECT * FROM createusers('Md', 'Fahad', 'Male', '2001-12-24', 'fahad@gmail.com', 'Fahad');
+ SELECT * FROM user_data;
+ 
+ 
+ 
+CREATE OR REPLACE FUNCTION get_users_by_email(uemail VARCHAR(150))
+returns table(
+email VARCHAR(150),
+password VARCHAR(20)
+) AS
+$$
+BEGIN
+return query(select u.email, u.password from user_data u where u.email=uemail);
+END
+$$
+ LANGUAGE 'plpgsql';
+ 
+ 
+ 
+ select * from get_users_by_email('fahad@gmail.com')
+ 

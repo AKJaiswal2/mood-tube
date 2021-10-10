@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="register" style="text-align: center">
+        <h1 style="color:white">Register</h1>
+        <p style="color:white">First Name</p>
+        <input type="text" id="firstname">
+        <p style="color:white">Last Name</p>
+        <input type="text" id="lastname">
+        <p style="color:white">Gender</p>
+        <input type="radio" style="color:white" name="gender" value="Male" onclick="sex()" >Male
+        <input type="radio" style="color:white" name="gender" value="Female" onclick="sex()" >Female
+        <input type="radio"  style="color:white" name="gender" value="Others" onclick="sex()" >Others
+        <p style="color:white">DOB</p>
+        <input type="date" id="DOB">
+        <p style="color:white">Email</p>
+        <input type="email" id="Email">
+        <p style="color:white">Password</p>
+        <input type="password" id="password">
+        <br>
+        <br>
+        <button type="button" class="button"  Width="89px" onclick="registerdata()" >Submit</button>
+    </div>
+    
+    
+</body>
+<script src="home.js"></script>
+</html>

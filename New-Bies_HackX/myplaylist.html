@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Play Your Mood</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style2.css">
+   
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <img class="responsive">
+                <div class="card md-4">
+                    <h2 class="card-header" id="fileName">Songs Lyrics</h2>
+                    <div class="card-body">
+                     <div class="displayBox scroll-box" id="fileContent">Select an Artist on the right</div>
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="https://www.youtube.com/" target="_blank">To Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card my-4">
+                    <h5 class="card-header">Select an Artist</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <u1 class="list-unstyled mb-0">
+                                    <li><a href="#" onclick="loadLyrics('khalid.txt','Better','khalid')">Khalid</a>
+                                        <audio controls id="khalid">
+                                            <source src="Khalid - Better.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </li>
+                                    <li><a href="#" onclick="loadLyrics('zyan.txt','Dusk Till Dawn','zyan')">Zyan</a>
+                                        <audio controls id="zyan">
+                                            <source src="ZAYN & Sia - Dusk Till Dawn.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </li>
+                                    <li><a href="#" onclick="loadLyrics('drake.txt','Gods Plan','drake')">Drake</a>
+                                        <audio controls id="drake">
+                                            <source src="Drake - God s Plan.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </li>
+                                    <li><a href="#" onclick="loadLyrics('post.txt','Sunflower','post')">Post Malone</a>
+                                        <audio controls id="post">
+                                            <source src="Post Malone, Swae Lee - Sunflower (Spider-Man Into the Spider-Verse).mp3" type="audio/mpeg">
+                                        </audio>
+                                    </li>
+                                    <li><a href="#" onclick="loadLyrics('future.txt','Life Is Good','future')">Future</a>
+                                        <audio controls id="future">
+                                            <source src="Future - Life Is Good (Official Music Video) ft. Drake.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </li>
+                                </u1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+
+            </div>
+        </div>
+
+      </div>
+      
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+    <script src="playlist.js"></script>
+  </body>
+</html>
